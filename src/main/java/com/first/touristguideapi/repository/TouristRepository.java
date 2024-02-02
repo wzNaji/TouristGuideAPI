@@ -26,7 +26,7 @@ public class TouristRepository {
         attractions.remove(touristAttraction);
     }
 
-    // SPECIFIC ATTRACTION
+    // GET SPECIFIC ATTRACTION
     public TouristAttraction getTouristAttractionByName(String name) {
         for (TouristAttraction touristAttraction:attractions) {
             if (touristAttraction.getName().equalsIgnoreCase(name)) {
@@ -36,7 +36,7 @@ public class TouristRepository {
         return null;
     }
 
-    // ALL ATTRACTIONS
+    // GET ALL ATTRACTIONS
     public ArrayList<TouristAttraction> getAttractions() {
         return attractions;
     }
@@ -49,7 +49,10 @@ public class TouristRepository {
         } else throw new IllegalArgumentException("No match found for your search on: " + attractionName);
     }
     public void editAttractionDescription(String attractionName, String newDescription) {
-
+        TouristAttraction attraction = findAttraction(attractionName);
+        if (attraction != null) {
+            attraction.setDescription(newDescription);
+        } else throw new IllegalArgumentException("No match found for your search on: " + attractionName);
     }
     private TouristAttraction findAttraction(String attractionName) {
         for (TouristAttraction touristAttraction:attractions) {
