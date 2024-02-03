@@ -23,7 +23,7 @@ public class TouristController {
 
     // ADD ATTRACTION
     @PostMapping
-    public ResponseEntity<Void> addTouristAttraction(@RequestBody @Validated TouristAttraction attraction) {
+    public ResponseEntity<Void> addTouristAttraction(@RequestBody TouristAttraction attraction) {
         touristService.addAttraction(attraction);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
