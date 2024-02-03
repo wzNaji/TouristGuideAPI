@@ -29,7 +29,7 @@ public class TouristController {
     }
 
     // REMOVE ATTRACTION
-    @DeleteMapping("/{name}")
+    @GetMapping("/delete/{name}")
     public ResponseEntity<Void> removeTouristAttraction(@PathVariable String name) {
         TouristAttraction attraction = touristService.getTouristAttractionByName(name);
         if (attraction != null) {
@@ -56,7 +56,7 @@ public class TouristController {
     }
 
     // EDIT ATTRACTION NAME
-    @PutMapping("/{name}/editName")
+    @PostMapping("/editName/{name}")
     public ResponseEntity<Void> editAttractionName(@PathVariable String name, @RequestParam String newName) {
         try {
             touristService.editAttractionName(name, newName);
@@ -67,7 +67,7 @@ public class TouristController {
     }
 
     // EDIT ATTRACTION DESCRIPTION
-    @PutMapping("/{name}/editDescription")
+    @PostMapping("/editDescription/{name}")
     public ResponseEntity<Void> editAttractionDescription(@PathVariable String name, @RequestParam String newDescription) {
         try {
             touristService.editAttractionDescription(name, newDescription);
