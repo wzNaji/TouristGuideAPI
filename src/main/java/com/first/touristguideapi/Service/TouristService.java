@@ -4,7 +4,6 @@ import com.first.touristguideapi.model.TouristAttraction;
 import com.first.touristguideapi.repository.TouristRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 
 @Service

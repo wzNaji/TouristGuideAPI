@@ -22,10 +22,10 @@ public class TouristController {
         this.touristService = touristService;
     }
 
-    // ADD ATTRACTION
-    @PostMapping
-    public ResponseEntity<Void> addTouristAttraction(@RequestBody TouristAttraction attraction) {
-        touristService.addAttraction(attraction);
+    // ADD ATTRACTION (lavet om til at tage 2 Strings (name, description), i stedet for et objekt)
+    @PostMapping("/add")
+    public ResponseEntity<Void> addTouristAttraction(@RequestParam TouristAttraction touristAttraction) {
+        touristService.addAttraction(touristAttraction);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
