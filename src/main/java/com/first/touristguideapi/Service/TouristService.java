@@ -37,12 +37,19 @@ public class TouristService {
     }
 
     // EDIT ATTRACTION
+
+    public TouristAttraction updateAttraction(TouristAttraction touristAttraction) {
+        return touristRepository.updateAttraction(touristAttraction);
+    }
+    /*
     public void editAttractionName(String attractionName, String newName) {
         touristRepository.editAttractionName(attractionName, newName);
     }
     public void editAttractionDescription(String attractionName, String newName) {
         touristRepository.editAttractionDescription(attractionName, newName);
     }
+
+     */
 
 
 

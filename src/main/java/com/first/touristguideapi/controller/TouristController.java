@@ -4,6 +4,7 @@ import com.first.touristguideapi.Service.TouristService;
 import com.first.touristguideapi.model.TouristAttraction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
@@ -56,27 +57,13 @@ public class TouristController {
     }
 
     // EDIT ATTRACTION NAME
-    @PostMapping("/editName/{name}")
-    public ResponseEntity<Void> editAttractionName(@PathVariable String name, @RequestParam String newName) {
-        try {
-            touristService.editAttractionName(name, newName);
-            return new ResponseEntity<>(HttpStatus.OK);
-        } catch (IllegalArgumentException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    @PostMapping("/update")
+    public ResponseEntity<TouristAttraction> updateAttraction(@RequestBody TouristAttraction touristAttraction) {
+        TouristAttraction touristAttraction1 = touristService.updateAttraction(touristAttraction);
+        if (touristAttraction1 != null) {
+            return new ResponseEntity<TouristAttraction>(touristAttraction1, HttpStatus.OK);
         }
+        return new ResponseEntity<TouristAttraction>(new TouristAttraction("Error", "Not Found"),HttpStatus.NOT_FOUND);
     }
-
-    // EDIT ATTRACTION DESCRIPTION
-    @PostMapping("/editDescription/{name}")
-    public ResponseEntity<Void> editAttractionDescription(@PathVariable String name, @RequestParam String newDescription) {
-        try {
-            touristService.editAttractionDescription(name, newDescription);
-            return new ResponseEntity<>(HttpStatus.OK);
-        } catch (IllegalArgumentException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-
-
 
 }

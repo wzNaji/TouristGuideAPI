@@ -21,10 +21,18 @@ public class TouristRepository {
         attractions.add(touristAttraction);
     }
 
-    // REMOVE
+
     public void removeTouristAttraction(TouristAttraction touristAttraction) {
-        attractions.remove(touristAttraction);
+        TouristAttraction attractionToDelete = null;
+        for (TouristAttraction touristAttraction1:attractions) {
+            if (touristAttraction1.equals(touristAttraction)) {
+                attractionToDelete = touristAttraction1;
+            }
+        }
+        attractions.remove(attractionToDelete);
     }
+
+
 
     // GET SPECIFIC ATTRACTION
     public TouristAttraction getTouristAttractionByName(String name) {
@@ -42,25 +50,21 @@ public class TouristRepository {
     }
 
     // EDIT ATTRACTION
-    public void editAttractionName(String attractionName, String newName) {
-        TouristAttraction attraction = findAttraction(attractionName);
-        if (attraction != null) {
-            attraction.setName(newName);
-        } else throw new IllegalArgumentException("No match found for your search on: " + attractionName);
-    }
-    public void editAttractionDescription(String attractionName, String newDescription) {
-        TouristAttraction attraction = findAttraction(attractionName);
-        if (attraction != null) {
-            attraction.setDescription(newDescription);
-        } else throw new IllegalArgumentException("No match found for your search on: " + attractionName);
-    }
-    private TouristAttraction findAttraction(String attractionName) {
-        for (TouristAttraction touristAttraction:attractions) {
-            if(touristAttraction.getName().equalsIgnoreCase(attractionName)) {
-                return touristAttraction;
-            }
+
+    public TouristAttraction updateAttraction(TouristAttraction touristAttraction) {
+        if (findAttraction(touristAttraction)) {
+            return touristAttraction;
         }
         return null;
+    }
+    private Boolean findAttraction(TouristAttraction touristAttraction) {
+        for (TouristAttraction touristAttraction1:attractions) {
+            if(touristAttraction.getName().equalsIgnoreCase(touristAttraction1.getName()) &&
+            touristAttraction.getDescription().equalsIgnoreCase(touristAttraction1.getDescription())) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
