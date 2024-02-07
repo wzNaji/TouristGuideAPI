@@ -5,6 +5,8 @@
     text-align: center; /* Centers the text for all child elements, might need adjustment for the h1 */
     margin-bottom: 10px;
     margin-top: 10px;
+    border:2px dotted yellow;
+
     padding: 20px;
     background: linear-gradient(to right, green, limegreen, yellow);
     color: yellow;
@@ -13,6 +15,8 @@
 .overskrift h1 {
     flex-grow: 1; /* Allows the h1 to take up the remaining space */
     margin: 0 auto; /* Centers the h1 within the available space */
+
+
 }
 
 .logo {
@@ -42,6 +46,7 @@ line-height: 1;
 outline: none;
 overflow: hidden;
 padding: 13px 20px;
+    margin-left: 20px;
 position: relative;
 text-align: center;
 text-decoration: none;
@@ -67,6 +72,7 @@ white-space: nowrap;
 }
 .buttonSubpage {
     appearance: none;
+    margin-bottom: 10px;
     backface-visibility: hidden;
     background-color: #27ae60;
     border-radius: 8px;
@@ -107,4 +113,27 @@ white-space: nowrap;
 .buttonSubpage:active {
     transform: translateY(2px);
     transition-duration: .35s;
+}
+.itemList{
+    border: 5px inset darkolivegreen;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+
+}
+.item{
+    border-bottom: 2px solid darkolivegreen;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 500px;
+
+}
+.p{
+
+    padding-left: 20px;
+    padding-right: 500px;
+
+}
+.credit{
+    padding-left: 10px;
 }
