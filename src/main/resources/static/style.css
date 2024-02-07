@@ -1,165 +1,146 @@
-.overskrift {
-    display: flex; /* Enables flexbox layout */
-    align-items: center; /*  flex items centreret verticalt */
-    justify-content: flex-start; /* Aligns items to the start of the flex container, keeping the image on the left */
-    text-align: center; /* Centers the text for all child elements, might need adjustment for the h1 */
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border:2px dotted yellow;
-
-    padding: 20px;
-    background: linear-gradient(to right, green, limegreen, yellow);
-    color: yellow;
-}
-
-.overskrift h1 {
-    flex-grow: 1; /* Allows the h1 to take up the remaining space */
-    margin: 0 auto; /* Centers the h1 within the available space */
-}
-.overskriftLinks {
-    display: flex; /* Enables flexbox layout */
-    align-items: center; /*  flex items centreret verticalt */
-    justify-content: flex-start; /* Aligns items to the start of the flex container, keeping the image on the left */
-    text-align: center; /* Centers the text for all child elements, might need adjustment for the h1 */
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border:2px dotted yellow;
-
-    padding: 20px 20px 20px 400px;
-    background: linear-gradient(to right, green, limegreen, yellow);
-    color: yellow;
-
+/* Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
     font-family: 'Arial', sans-serif;
-}
-.logo {
-    width: 150px;
-    height: 150px;
-    margin-right: 20px; /* Adds some space between the image and the h1 */
-}
-body {
     background: linear-gradient(to right, green, yellow);
 }
-.buttonLinks {
-appearance: none;
-backface-visibility: hidden;
-background-color: #27ae60;
-border-radius: 8px;
-border-style: none;
-box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
-box-sizing: border-box;
-color: #fff;
-cursor: pointer;
-display: inline-block;
-font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
-font-size: 16px;
-font-weight: 600;
-letter-spacing: normal;
-line-height: 1;
-outline: none;
-overflow: hidden;
-padding: 13px 20px;
-    margin-left: 20px;
-position: relative;
-text-align: center;
-text-decoration: none;
-transform: translate3d(0, 0, 0);
-transition: all .3s;
-user-select: none;
--webkit-user-select: none;
-touch-action: manipulation;
-vertical-align: top;
-white-space: nowrap;
-                                                   }
 
-.buttonLinks:hover {
-    background-color: yellow;
-    opacity: 1;
-    transform: translateY(0);
-    transition-duration: .35s;
-}
-
-.buttonLinks:active {
-    transform: translateY(2px);
-    transition-duration: .35s;
-}
-.buttonSubpage {
-    appearance: none;
-    margin-bottom: 10px;
-    backface-visibility: hidden;
-    background-color: #27ae60;
-    border-radius: 8px;
-    border-style: none;
-    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: normal;
-    line-height: 1;
-    outline: none;
-    overflow: hidden;
-    padding: 5px 40px; /* Adjust padding for a broader button */
-    position: relative;
+/* Header */
+header {
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    padding: 20px;
+    color: white;
     text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: darkolivegreen;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em; /* Adjusted for readability */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2, h3 {
+    color: #333;
+    margin: 20px 0;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
-    transform: translate3d(0, 0, 0);
-    transition: all .3s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: top;
-    white-space: nowrap;
+    border-radius: 5px;
+    margin: 10px 0;
 }
 
-
-.buttonSubpage:hover {
-    background-color: yellow;
-    opacity: 1;
-    transform: translateY(0);
-    transition-duration: .35s;
+.button:hover {
+    background-color: #45a049;
 }
 
-.buttonSubpage:active {
-    transform: translateY(2px);
-    transition-duration: .35s;
+/* Attraction Images */
+.attractions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
-.itemList{
-    border: 5px inset darkolivegreen;
-    padding-bottom: 10px;
-    padding-top: 10px;
 
+.attraction {
+    text-align: center;
+}
 
+.attraction-image, .attraction-image-small, .attraction-image-large {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
 }
-.item{
-    border-bottom: 2px solid darkolivegreen;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-right: 500px;
-    font-family: 'Arial', sans-serif;
-    color: black;
+#denblåplanetP {
+    margin-top: 50px;
+}
+#zooP {
+    margin-top: 50px;
+}
 
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
-.p {
-    padding-left: 20px;
-    padding-right: 500px;
-    font-family: 'Arial', sans-serif;
+
+/* API Links */
+.api-endpoints {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
 }
-.credit {
-    padding-left: 10px;
+
+.api-endpoints li {
+    margin: 5px 10px;
 }
-.imagesContainer {
-    align-self: center;
-    margin-left: 20px;
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .attractions-container {
+        grid-template-columns: 1fr;
+    }
 }
-.bulletsFarve {
-    color: yellow;
-}
-.linkRef {
-    padding-left: 20px;
-    padding-right: 500px;
-    font-family: 'Arial', sans-serif;
-    color: #ffd339;
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
 }

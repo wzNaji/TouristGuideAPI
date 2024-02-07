@@ -1,61 +1,70 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Turist guide halløjsa</title>
+    <title>Tourist Guide Halløjsa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="overskrift">
-        <img class="logo" src="Images/logo.png" alt="Logo"> <h1>Velkommen til Danmarks Naturskønne Eventyr!</h1>
-    </header>
-    <main>
-        <section>
-            <p class="p">Velkommen til din ultimative guide til Danmarks naturskønne vidundere! Uanset om du er en ivrig vandrer, en passioneret fuglekigger, eller blot på udkig efter de perfekte naturoplevelser, der kan nydes alene eller med familien, er vores guide skabt til at inspirere og assistere rejsende af alle slags. Fra de bløde bakker i Sydjylland til de vilde klitter langs Vestkysten, og fra de idylliske øer som Bornholm til de historiske skove i Nordjylland, dækker vores guide hele kongeriget og byder på noget for enhver smag.</p>
-
-        </section>
-        <section>
-            <h2 class="overskrift">Hvad Kan Denne Guide Tilbyde Dig?</h2>
-            <ul class="itemList">
-                <li class="item"><strong class="bulletsFarve">Landsdækkende Dækning:</strong><br> Vores guide er omfattende og dækker hele Danmark. Vi tager dig med til hvert hjørne af landet, hvor vi udforsker kendte såvel som skjulte perler.</li>
-                <li class="item"><strong class="bulletsFarve">Tilpasset Alle Naturelskere:</strong><br> Uanset om du er soloeventyrer, en del af et par, eller del af en familie på udkig efter dit næste store eventyr, har vi noget for dig. Vores guide er designet til at imødekomme behovene hos naturelskere i alle aldre og med forskellige interesser.</li>
-                <li class="item"><strong class="bulletsFarve">Din Personlige Bucket List:</strong><br> Brug vores guide til at skabe din egen bucket list over naturoplevelser i Danmark. Fra de mest spændende vandrestier til de mest fredfyldte picnic spots, vi giver dig inspirationen og informationen du behøver for at gøre din næste tur uforglemmelig.</li>
-                <li class="item"><strong class="bulletsFarve">Engagerende og Informativ:</strong><br> Med dybdegående beskrivelser, praktiske rejsetips, og inspirerende billeder, gør vores guide det nemt for dig at planlægge dit næste eventyr. Vi deler også historier fra lokalsamfundene, giver indsigt i Danmarks naturbevarelse og foreslår bæredygtige rejsepraksisser for at sikre, at de steder vi elsker forbliver smukke for fremtidige generationer.</li>
-            </ul>
-        </section>
-        <section class="p">
-            <p>Vores guide er mere end bare en rejseplanlægger; det er en invitation til at udforske det bedste af Danmarks natur, en opfordring til at fordybe sig i landets rige landskaber og en mulighed for at skabe minder, der varer livet ud. Tag med os på en rejse gennem Danmark, og lad os sammen udforske landets skjulte skatte.</p>
-            <p><strong>Velkommen til en verden af eventyr – Danmarks naturskønne vidundere venter på dig!</strong></p>
-        </section>
-    </main>
-        <section>
-        <h3 class="overskriftLinks">Her er 3 links til populære naturskønne attraktioner i Danmark</h3>
-        <nav class="imagesContainer">
-            <p class="linkRef"><strong> Oplev suget i maven. Over Skovtårnets arkitektur, den sydsjællandske natur og den storslåede udsigt fra toppen af Skovtårnet højt over træernes kroner.</strong></p><a href="https://www.campadventure.dk/skovtaarnet/"><button class="buttonLinks">Skovtårnet</button></a><br><br>
-            <img src="Images/skovtårnet.png" alt="Drone billede af skovtårnet og skoven omkring" width="900" height="400">
-            <p class="credit"> <strong>Foto:</strong> Visit Sydsjælland & Møn</p> <br>
-            <p class ="linkRef"><strong> Oplev en verdensomsejling under overfladen</strong> </p><a href="https://denblaaplanet.dk/"><button class="buttonLinks">Den Blå Planet</button></a><br><br>
-            <img src="Images/denblåplanet.png" alt="Gennemsigtig tunnel omringet af vand med dyr svømmende langs tunellen" width="900" height="400">
-            <p class="credit"><strong>Foto:</strong> Den Blå Planet</p> <br>
-            <p class="linkRef"><strong> Zoologisk Have København er en af Danmarks ældste kulturinstitutioner med en historie, der trækker tråde helt tilbage til 1859. </strong></p><a href="https://www.zoo.dk/"><button class="buttonLinks">Zoologisk Have</button></a><br><br>
-            <img src="Images/zooGiraffer.png" alt="Løbende giraffer i Zoologisk have Frederiksberg" width="450" height="200"> <img src="Images/zooNæsehorn.png" alt="To næsehorn der støder hornene imod hinanden i Zoo" width="450" height="200">
-            <img src="Images/zooPanda.png" alt="Portræt af en panda der spiser bambus kiggende imod kameraet" width="904" height="200">
-            <p class="credit"><strong>Foto:</strong> Zoologisk Have, København, Frederiksberg </p> <br>
-        </nav>
-        <h3 class="linkRef">Her er links til de 3 GET endpoints</h3>
-        <nav>
-            <ul>
-                <li><a href="http://localhost:8080/attractions"><button class="buttonSubpage">Se alle attraktioner</button></a></li>
-                <li><a href="http://localhost:8080/attractions/hulk"><button class="buttonSubpage"> Se én af attraktionerne</button></a></li>
-                <li><a href="http://localhost:8080/attractions/delete/tårn"><button class="buttonSubpage"> Slet tårn </button></a></li>
-            </ul>
-        </nav>
+<header>
+    <div class="header-content">
+        <img src="Images/logo.png" alt="Logo" class="logo">
+        <h1>Welcome to Denmark's Scenic Adventures!</h1>
+    </div>
+</header>
+<main>
+    <section class="introduction">
+        <p>Welcome to your ultimate guide to Denmark's scenic wonders! Whether you are an avid hiker, a passionate bird watcher, or simply looking for the perfect nature experiences to enjoy alone or with the family, our guide is created to inspire and assist travelers of all kinds. From the soft hills of South Jutland to the wild dunes along the West Coast, and from the idyllic islands like Bornholm to the historic forests in North Jutland, our guide covers the entire kingdom and offers something for every taste.</p>
     </section>
-    <footer class="p">
-        <address>
-        <h3>Kontakt information</h3>
+    <section class="guide-offerings">
+        <h2>What Can This Guide Offer You?</h2>
+        <ul>
+            <li><strong>Nationwide Coverage:</strong> Our guide is comprehensive and covers all of Denmark. We take you to every corner of the country, exploring well-known as well as hidden gems.</li>
+            <li><strong>Suited for All Nature Lovers:</strong> Whether you're a solo adventurer, part of a couple, or a family looking for your next great adventure, we have something for you. Our guide is designed to meet the needs of nature lovers of all ages and with various interests.</li>
+            <li><strong>Your Personal Bucket List:</strong> Use our guide to create your own bucket list of nature experiences in Denmark. From the most exciting hiking trails to the most peaceful picnic spots, we provide you with the inspiration and information you need to make your next trip unforgettable.</li>
+            <li><strong>Engaging and Informative:</strong> With in-depth descriptions, practical travel tips, and inspiring images, our guide makes it easy for you to plan your next adventure. We also share stories from local communities, offer insights into Denmark's nature conservation, and suggest sustainable travel practices to ensure that the places we love remain beautiful for future generations.</li>
+        </ul>
+    </section>
+    <section class="invitation">
+        <p>Our guide is more than just a travel planner; it is an invitation to explore the best of Denmark's nature, a call to immerse yourself in the country's rich landscapes, and an opportunity to create memories that last a lifetime. Join us on a journey through Denmark, and let's explore the country's hidden treasures together.</p>
+        <p><strong>Welcome to a world of adventure – Denmark's scenic wonders await you!</strong></p>
+    </section>
+    <section class="popular-attractions">
+        <h3>Here are 3 links to popular scenic attractions in Denmark</h3>
+        <div class="attractions-container">
+            <div class="attraction">
+                <p><strong>Experience the thrill at Skovtårnet. Immerse yourself in the architecture of the Forest Tower, the nature of South Zealand, and the magnificent view from the top of the tower, high above the tree crowns.</strong></p>
+                <a href="https://www.campadventure.dk/skovtaarnet/" class="button">Skovtårnet</a>
+                <img src="Images/skovtårnet.png" alt="Drone photo of the forest tower and the surrounding forest" class="attraction-image">
+                <p class="credit"><strong>Photo:</strong> Visit South Zealand & Møn</p>
+            </div>
+            <div class="attraction">
+                <p id="denblåplanetP"><strong>Experience a world tour under the surface at The Blue Planet.</strong></p>
+                <a href="https://denblaaplanet.dk/" class="button">The Blue Planet</a>
+                <img src="Images/denblåplanet.png" alt="Transparent tunnel surrounded by water with animals swimming along the tunnel" class="attraction-image">
+                <p class="credit"><strong>Photo:</strong> The Blue Planet</p>
+            </div>
+            <div class="attraction">
+                <p id="zooP"><strong>Copenhagen Zoo is one of Denmark's oldest cultural institutions with a history dating back to 1859.</strong></p>
+                <a href="https://www.zoo.dk/" class="button">Zoo Garden</a>
+                <img src="Images/zooGiraffer.png" alt="Running giraffes in Copenhagen Zoo" class="attraction-image-small">
+                <p class="credit"><strong>Photo:</strong> Copenhagen Zoo, Frederiksberg</p>
+            </div>
+        </div>
+    </section>
+    <section class="api-links">
+        <h3>Here are links to the 3 GET endpoints</h3>
+        <ul class="api-endpoints">
+            <li><a href="http://localhost:8080/attractions" class="button">See all attractions</a></li>
+            <li><a href="http://localhost:8080/attractions/hulk" class="button">See one of the attractions</a></li>
+            <li><a href="http://localhost:8080/attractions/delete/tower" class="button">Delete tower</a></li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <address>
+        <h3>Contact Information</h3>
         <p>Email: x.stud@KEA.dk</p>
-        </address>
-    </footer>
+    </address>
+</footer>
 </body>
 </html>
