@@ -63,7 +63,7 @@ public class TouristController {
         if (touristAttraction1 != null) {
             return new ResponseEntity<TouristAttraction>(touristAttraction1, HttpStatus.OK);
         }
-        return new ResponseEntity<TouristAttraction>(new TouristAttraction("Error", "Not Found"),HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(new TouristAttraction("Error", "Not Found"),HttpStatus.NOT_FOUND);
     }
 
 }

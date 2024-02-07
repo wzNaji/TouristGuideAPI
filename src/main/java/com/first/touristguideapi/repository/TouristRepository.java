@@ -32,8 +32,6 @@ public class TouristRepository {
         attractions.remove(attractionToDelete);
     }
 
-
-
     // GET SPECIFIC ATTRACTION
     public TouristAttraction getTouristAttractionByName(String name) {
         for (TouristAttraction touristAttraction:attractions) {
