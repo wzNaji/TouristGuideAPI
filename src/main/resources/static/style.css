@@ -137,3 +137,7 @@ white-space: nowrap;
 .credit{
     padding-left: 10px;
 }
+.imagesContainer{
+    align-self: center;
+    margin-left: 20px;
+}
