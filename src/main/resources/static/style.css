@@ -14,7 +14,7 @@ header {
     text-align: center;
 }
 
-.header-contentt {
+.header-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,6 +120,8 @@ footer {
 .api-endpoints li {
     margin: 5px 10px;
 }
+
+
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {

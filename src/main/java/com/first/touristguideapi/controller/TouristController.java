@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +23,6 @@ public class TouristController {
         this.touristService = touristService;
     }
 
-    // ADD ATTRACTION (lavet om til at tage 2 Strings (name, description), i stedet for et objekt)
     @PostMapping("/add")
     public ResponseEntity<Void> addTouristAttraction(@RequestParam TouristAttraction touristAttraction) {
         touristService.addAttraction(touristAttraction);
@@ -52,8 +52,10 @@ public class TouristController {
 
     // GET ALL ATTRACTIONS
     @GetMapping
-    public ResponseEntity<List<TouristAttraction>> getAllAttractions() {
-        return new ResponseEntity<>(touristService.getAttractions(), HttpStatus.OK);
+    public String getAllAttractions(Model model) {
+        List<TouristAttraction> attractions = touristService.getAttractions();
+        model.addAttribute("attractions", attractions);
+        return "attractions";
     }
 
     // EDIT ATTRACTION NAME
